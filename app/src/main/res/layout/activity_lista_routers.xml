@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarRouters"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:title="Routers"
+        android:titleTextColor="@android:color/black"
+        android:background="@android:color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:contentDescription="@string/abc_action_bar_up_description"/>
+
+    <!-- Contenido debajo de la toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="56dp">
+
+        <!-- Empty state -->
+        <LinearLayout
+            android:id="@+id/emptyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="48dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:alpha="0.35"/>
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aún no registras routers"
+                android:textSize="16sp"
+                android:textColor="#777777"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Lista -->
+        <ListView
+            android:id="@+id/listRouters"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="12dp"
+            android:listSelector="?attr/selectableItemBackground"
+            android:paddingBottom="80dp"/>
+    </LinearLayout>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Añadir"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:layout_anchor="@id/listRouters"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_margin="16dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

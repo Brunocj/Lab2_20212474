@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="#E8E8E8"
+    app:strokeWidth="1dp"
+    android:clickable="false"
+    android:focusable="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Marca -->
+        <TextView
+            android:id="@+id/tvMarca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marca: -"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <!-- Modelo -->
+        <TextView
+            android:id="@+id/tvModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modelo: -"
+            android:textSize="15sp"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Velocidad -->
+        <TextView
+            android:id="@+id/tvVelocidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Velocidad: -"
+            android:textSize="13sp"
+            android:textColor="#616161"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Chip de estado -->
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operativo"
+            android:textSize="13sp"
+            android:textColor="#2E7D32"
+            android:background="#1A81C784"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
